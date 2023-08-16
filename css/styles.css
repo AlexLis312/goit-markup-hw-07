@@ -45,6 +45,7 @@
   justify-content: center;
 }
 .social {
+  display: flex;
   justify-content: center;
   margin-top: 16px;
 }
@@ -174,9 +175,7 @@
 .social-list-foot {
   display: flex;
 }
-.social-list-foot:not(:last-child) {
-  margin-right: 10px;
-}
+
 .social-foot {
   color: var(--prime-white-color);
   background-color: rgba(255, 255, 255, 0.1);
@@ -220,12 +219,9 @@ h1 {
   display: flex;
   align-items: center;
 }
-.main-nav {
-  display: flex;
-  align-items: center;
-}
 .site-nav {
   display: flex;
+  align-items: center;
 }
 .site-nav .item + .item {
   margin-left: 50px;
@@ -383,9 +379,7 @@ h1 {
 }
 
 /* What do we do */
-.no-padd {
-  padding-top: 0;
-}
+
 .do {
   margin-top: 50px;
   display: flex;
@@ -506,9 +500,6 @@ address {
   display: none;
 }
 
-.noline {
-  text-decoration: none;
-}
 .portfolio-buttons {
   justify-content: center;
   display: flex;
@@ -547,6 +538,12 @@ address {
   color: var(--prime-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* portfolio projects*/
+
+.noline {
+  text-decoration: none;
 }
 
 .works-title {
@@ -634,6 +631,8 @@ address {
   line-height: 1.88;
 }
 
+/* modal */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -693,6 +692,7 @@ address {
   width: 18px;
   height: 18px;
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0 4, 0, 0.2, 1);
 }
 
 .button-close:hover .close-icon,
@@ -776,7 +776,7 @@ textarea {
 
   color: var(--text-color);
 }
-.comment {
+.comment a {
   margin: 0;
   padding: 12px 16px;
   border-radius: 4px;
@@ -935,7 +935,6 @@ textarea {
 }
 .checkbox {
   position: absolute;
-  /* appearance: none; */
   width: 1px;
   height: 1px;
   margin: -1px;
